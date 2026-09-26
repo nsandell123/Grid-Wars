@@ -76,6 +76,190 @@ body {
   text-shadow: none;
 }
 
+/* --- View Toggle --- */
+.view-toggle {
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+  padding: 8px 16px;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+  white-space: nowrap;
+}
+
+.view-toggle:hover {
+  background: rgba(0, 255, 136, 0.15);
+  border-color: #00ff88;
+}
+
+/* --- Trading View Layout --- */
+.trading-view {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.trading-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid rgba(0, 255, 136, 0.15);
+}
+
+.chart-container {
+  flex: 1;
+  padding: 16px;
+  min-height: 200px;
+}
+
+.trading-right {
+  width: 320px;
+  overflow-y: auto;
+}
+
+/* --- Order Book --- */
+.order-book {
+  padding: 12px;
+  font-size: 12px;
+}
+
+.ob-section {
+  margin-bottom: 12px;
+}
+
+.ob-header {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(0, 255, 136, 0.5);
+  margin-bottom: 6px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+}
+
+.ob-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 4px 0;
+  font-family: 'Courier New', monospace;
+}
+
+.ob-row.bid .ob-price { color: #00ff88; }
+.ob-row.ask .ob-price { color: #ff4444; }
+.ob-row.trade .ob-price { color: rgba(255, 255, 255, 0.7); }
+
+.ob-source {
+  color: rgba(0, 255, 136, 0.5);
+  width: 70px;
+}
+
+.ob-price {
+  width: 80px;
+  text-align: right;
+}
+
+.ob-kw {
+  width: 80px;
+  text-align: right;
+  color: rgba(0, 255, 136, 0.6);
+}
+
+.ob-spread {
+  text-align: center;
+  padding: 8px 0;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 11px;
+  letter-spacing: 1px;
+  border-top: 1px solid rgba(0, 255, 136, 0.1);
+  border-bottom: 1px solid rgba(0, 255, 136, 0.1);
+  margin: 4px 0;
+}
+
+.ob-sell { color: #ff4444; font-weight: bold; }
+.ob-buy { color: #00ff88; font-weight: bold; }
+
+/* --- Order Form --- */
+.order-form {
+  padding: 16px;
+  border-top: 1px solid rgba(0, 255, 136, 0.15);
+}
+
+.of-title {
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: rgba(0, 255, 136, 0.5);
+  margin-bottom: 10px;
+}
+
+.of-row {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.of-side {
+  flex: 1;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: rgba(0, 255, 136, 0.5);
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.of-side.active-sell {
+  border-color: #ff4444;
+  color: #ff4444;
+  background: rgba(255, 68, 68, 0.1);
+}
+
+.of-side.active-buy {
+  border-color: #00ff88;
+  color: #00ff88;
+  background: rgba(0, 255, 136, 0.1);
+}
+
+.of-row input {
+  flex: 1;
+  background: rgba(0, 255, 136, 0.05);
+  border: 1px solid rgba(0, 255, 136, 0.2);
+  color: #00ff88;
+  padding: 8px 10px;
+  font-family: 'Courier New', monospace;
+  font-size: 12px;
+  outline: none;
+}
+
+.of-row input::placeholder {
+  color: rgba(0, 255, 136, 0.3);
+}
+
+.of-row input:focus {
+  border-color: #00ff88;
+}
+
+.of-submit {
+  width: 100%;
+  padding: 10px;
+  background: rgba(0, 255, 136, 0.1);
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  color: #00ff88;
+  font-family: 'Courier New', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  letter-spacing: 1px;
+  transition: all 0.2s;
+}
+
+.of-submit:hover {
+  background: rgba(0, 255, 136, 0.2);
+  border-color: #00ff88;
+}
+
 /* --- Main Grid Area --- */
 .grid-container {
   flex: 1;
